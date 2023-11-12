@@ -12,39 +12,39 @@ public class OrderApiClient extends BaseApiClient {
         return getPostSpec()
                 .header("Authorization", accessToken)
                 .body(ingredientsRequest)
-                .post(BASE_URL + "/api/orders");
+                .post(BASE_URL + "/orders");
     }
 
     @Step("Создание заказа без авторизации")
     public Response createOrderWithoutAuth(IngredientsRequest ingredientsRequest) {
         return getPostSpec()
                 .body(ingredientsRequest)
-                .post(BASE_URL + "/api/orders");
+                .post(BASE_URL + "/orders");
     }
 
     @Step("Создание заказа без ингредиента")
     public Response createOrder() {
         return getPostSpec()
-                .post(BASE_URL + "/api/orders");
+                .post(BASE_URL + "/orders");
     }
 
     @Step("Получить список ингредиентов")
     public Response getIngredients() {
         return getPostSpec()
-                .get(BASE_URL + "/api/ingredients");
+                .get(BASE_URL + "/ingredients");
     }
 
     @Step("Получить заказы без авторизации")
     public Response getOrders() {
         return getPostSpec()
-                .get(BASE_URL + "/api/orders");
+                .get(BASE_URL + "/orders");
     }
 
     @Step("Получить заказы без авторизации")
     public Response getOrders(String accessToken) {
         return getPostSpec()
                 .header("Authorization", accessToken)
-                .get(BASE_URL + "/api/orders");
+                .get(BASE_URL + "/orders");
     }
 
 }

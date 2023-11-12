@@ -15,14 +15,14 @@ public class CourierApiClient extends BaseApiClient{
         return getPostSpec()
                 .body(createCourierRequest)
                 .when()
-                .post(BASE_URL + "/api/auth/register");
+                .post(BASE_URL + "/auth/register");
     }
     @Step("Авторизация курьера")
     public Response loginCourier(LoginCourierRequest loginCourierRequest) {
         return getPostSpec()
                 .body(loginCourierRequest)
                 .when()
-                .post(BASE_URL + "/api/auth/login");
+                .post(BASE_URL + "/auth/login");
     }
 
     @Step("Изменение данных курьера")
@@ -30,14 +30,14 @@ public class CourierApiClient extends BaseApiClient{
         return getPostSpec()
                 .header("Authorization", accessToken)
                 .body(user)
-                .patch(BASE_URL + "/api/auth/user");
+                .patch(BASE_URL + "/auth/user");
     }
 
     @Step("Изменение данных курьера")
     public Response updateCourierWrong(UserResponse user) {
         return getPostSpec()
                 .body(user)
-                .patch(BASE_URL + "/api/auth/user");
+                .patch(BASE_URL + "/auth/user");
     }
 
     @Step("Удаление курьера")
@@ -45,6 +45,6 @@ public class CourierApiClient extends BaseApiClient{
         return getPostSpec()
                 .header("Authorization", accessToken)
                 .body(deleteCourierRequest)
-                .delete(BASE_URL + "/api/auth/user");
+                .delete(BASE_URL + "/auth/user");
     }
 }
