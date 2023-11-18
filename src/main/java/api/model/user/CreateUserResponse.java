@@ -1,23 +1,23 @@
-package api.model.courier;
+package api.model.user;
 
-public class LoginCourierResponse {
+public class CreateUserResponse {
     private Boolean success;
     private UserResponse user;
     private String accessToken;
     private String refreshToken;
     private String message;
 
-    public LoginCourierResponse(Boolean success, UserResponse user, String accessToken, String refreshToken) {
+    public CreateUserResponse(Boolean success, UserResponse user, String accessToken, String refreshToken) {
         this.success = success;
         this.user = user;
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;
     }
 
-    public LoginCourierResponse() {
+    public CreateUserResponse() {
     }
 
-    public LoginCourierResponse(Boolean success, String message) {
+    public CreateUserResponse(Boolean success, String message) {
         this.success = success;
         this.message = message;
     }

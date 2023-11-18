@@ -1,4 +1,4 @@
-package api.model.order.createOrder;
+package api.model.order.createorder;
 
 public class CreateOrderResponse {
     private String name;

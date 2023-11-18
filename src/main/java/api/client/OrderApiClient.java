@@ -1,6 +1,6 @@
 package api.client;
 
-import api.model.order.createOrder.IngredientsRequest;
+import api.model.order.createorder.IngredientsRequest;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
@@ -12,39 +12,39 @@ public class OrderApiClient extends BaseApiClient {
         return getPostSpec()
                 .header("Authorization", accessToken)
                 .body(ingredientsRequest)
-                .post(BASE_URL + "/orders");
+                .post("/orders");
     }
 
     @Step("Создание заказа без авторизации")
     public Response createOrderWithoutAuth(IngredientsRequest ingredientsRequest) {
         return getPostSpec()
                 .body(ingredientsRequest)
-                .post(BASE_URL + "/orders");
+                .post("/orders");
     }
 
     @Step("Создание заказа без ингредиента")
     public Response createOrder() {
         return getPostSpec()
-                .post(BASE_URL + "/orders");
+                .post("/orders");
     }
 
     @Step("Получить список ингредиентов")
     public Response getIngredients() {
         return getPostSpec()
-                .get(BASE_URL + "/ingredients");
+                .get("/ingredients");
     }
 
     @Step("Получить заказы без авторизации")
     public Response getOrders() {
         return getPostSpec()
-                .get(BASE_URL + "/orders");
+                .get("/orders");
     }
 
     @Step("Получить заказы без авторизации")
     public Response getOrders(String accessToken) {
         return getPostSpec()
                 .header("Authorization", accessToken)
-                .get(BASE_URL + "/orders");
+                .get("/orders");
     }
 
 }

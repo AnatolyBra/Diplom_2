@@ -1,4 +1,4 @@
-package api.model.courier;
+package api.model.user;
 
 public class UserResponse {
     private String email;
@@ -7,6 +7,9 @@ public class UserResponse {
     public UserResponse(String email, String name) {
         this.email = email;
         this.name = name;
+    }
+
+    public UserResponse() {
     }
 
     public String getEmail() {

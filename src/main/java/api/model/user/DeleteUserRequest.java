@@ -1,16 +1,12 @@
-package api.model.courier;
+package api.model.user;
 
-public class LoginCourierRequest {
+public class DeleteUserRequest {
     private String email;
     private String password;
 
-    public LoginCourierRequest(String email, String password) {
+    public DeleteUserRequest(String email, String password) {
         this.email = email;
         this.password = password;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getEmail() {
@@ -19,8 +15,5 @@ public class LoginCourierRequest {
 
     public String getPassword() {
         return password;
-    }
-
-    public LoginCourierRequest() {
     }
 }

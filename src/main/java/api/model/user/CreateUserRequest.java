@@ -1,17 +1,17 @@
-package api.model.courier;
+package api.model.user;
 
-public class CreateCourierRequest {
+public class CreateUserRequest {
     private String email;
     private String password;
     private String name;
 
-    public CreateCourierRequest(String email, String password, String name) {
+    public CreateUserRequest(String email, String password, String name) {
         this.email = email;
         this.password = password;
         this.name = name;
     }
 
-    public CreateCourierRequest() {
+    public CreateUserRequest() {
     }
 
     public String getPassword() {

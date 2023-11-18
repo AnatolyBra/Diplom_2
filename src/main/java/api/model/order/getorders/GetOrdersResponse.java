@@ -1,4 +1,4 @@
-package api.model.order.getOrders;
+package api.model.order.getorders;
 
 public class GetOrdersResponse {
     private boolean success;
